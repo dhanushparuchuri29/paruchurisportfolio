@@ -1,0 +1,44 @@
+========================================================================
+DHANUSH PORTFOLIO — HOW TO ADD YOUR OWN VIDEOS
+========================================================================
+
+The website now supports:
+1. YouTube links (e.g. https://www.youtube.com/watch?v=YOUR_VIDEO_ID or https://youtu.be/YOUR_VIDEO_ID)
+2. Vimeo links (e.g. https://vimeo.com/YOUR_VIDEO_ID)
+3. Direct MP4/WebM URLs hosted online (Google Drive direct link, Dropbox ?raw=1, Cloudinary, AWS S3, etc.)
+4. Local video files placed directly in this folder (/public/videos/your-video.mp4)
+
+------------------------------------------------------------------------
+1. TO REPLACE THE SHOWREEL VIDEO:
+------------------------------------------------------------------------
+Open: /src/components/Showreel.tsx (around lines 18-19)
+Replace:
+  const showreelVideoUrl = 'YOUR_VIDEO_URL_HERE';
+  const showreelPoster = 'YOUR_THUMBNAIL_IMAGE_URL_HERE';
+
+Examples:
+- Using YouTube: const showreelVideoUrl = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+- Using Vimeo: const showreelVideoUrl = 'https://vimeo.com/123456789';
+- Using Local File: const showreelVideoUrl = '/videos/my-showreel.mp4';
+
+------------------------------------------------------------------------
+2. TO REPLACE PORTFOLIO PROJECT VIDEOS:
+------------------------------------------------------------------------
+Open: /src/data/projects.ts
+Find any of the project entries (e.g. 'project-hail-mary', 'wedding-stories', etc.)
+Update:
+  videoUrl: 'YOUR_VIDEO_URL_HERE',
+  thumbnailUrl: 'YOUR_COVER_IMAGE_URL_HERE',
+  title: 'Your Project Title',
+  client: 'Your Client Name',
+  duration: '02:30',
+  aspectRatio: '16:9', // or '9:16', '2.39:1'
+
+------------------------------------------------------------------------
+OR SIMPLY SEND ME THE LINKS IN THE CHAT:
+------------------------------------------------------------------------
+You can also reply directly in the chat with your links, for example:
+"Please replace the Showreel with https://youtube.com/watch?v=..."
+"Please replace Project 1 with https://..."
+and I will update them for you automatically!
+========================================================================
